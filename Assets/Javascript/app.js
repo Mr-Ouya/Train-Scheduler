@@ -27,7 +27,14 @@
     console.log("Start Date "+fFirstTrainTime);
     console.log("Monthly Rate "+fFrequency);
 
-
+    database.ref('/train').push({
+      trainName: fTrainName,
+      destination: fDestination,
+      firstTrainTime: fFirstTrainTime,
+      frequency: fFrequency,
+      
+    });
+  
 
 
   });
